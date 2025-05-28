@@ -143,11 +143,10 @@ section[id] {
     .nav-links {
         display: none;
         position: absolute;
-		order: 3; /* Menu items come last */
         top: 100%;
         left: 0;
         right: 0;
-        background: #fff;
+        background: #2c5282; /* Dark blue background */
         padding: 1rem;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
@@ -176,7 +175,14 @@ section[id] {
     }
 
     #navbar .nav-links a {
-        color: #333 !important;
+        color: white !important;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    #navbar .nav-links a:hover {
+        background-color: rgba(255,255,255,0.1);
     }
 	.reviews-navigation {
         gap: 1rem;
@@ -196,6 +202,15 @@ section[id] {
     }
 	.portfolio-card {
         min-width: 45%;
+    }
+	 /* Mobile menu button contrast */
+    .mobile-menu-toggle .hamburger,
+    .mobile-menu-toggle .hamburger::before,
+    .mobile-menu-toggle .hamburger::after {
+        background: white;
+    }
+	#navbar.scrolled .nav-links {
+        background: #2c5282;
     }
 }
 @media (min-width: 1024px) {
